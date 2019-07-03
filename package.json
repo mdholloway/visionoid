@@ -38,11 +38,13 @@
     "express": "^4.17.1",
     "http-shutdown": "^1.2.1",
     "js-yaml": "^3.13.1",
+    "lodash": "^4.17.11",
     "preq": "^0.5.9",
     "service-runner": "^2.7.1",
     "swagger-router": "^0.7.4",
     "swagger-ui-dist": "^3.22.3",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "word-list": "^3.1.0"
   },
   "devDependencies": {
     "ajv": "^6.5.4",
