@@ -16,7 +16,7 @@ function fetchTags(imageTitle, imageUrl) {
     return Promise.resolve(response);
 }
 
-router.get('/tags', (req, res) => {
+router.get('/labels', (req, res) => {
     const imageTitle = req.query.title;
     const imageUrl = req.query.url;
     // const kaskUrl = req.app.conf.kask_url;
