@@ -40,6 +40,7 @@ module.exports = () => {
     return {
         path: '/',
         api_version: 1,
+        skip_domain: true,
         router
     };
 
