@@ -1,7 +1,6 @@
 'use strict';
 
 const _ = require('lodash');
-// const preq = require('preq');
 const words = require('fs').readFileSync(require('word-list'), 'utf8').split('\n');
 const router = require('../lib/util').router();
 
@@ -19,20 +18,10 @@ function fetchTags(imageTitle, imageUrl) {
 router.get('/labels', (req, res) => {
     const imageTitle = req.query.title;
     const imageUrl = req.query.url;
-    // const kaskUrl = req.app.conf.kask_url;
-    // return preq.get(`${kaskUrl}/${imageTitle}`)
-        // .then(rsp => res.json(rsp.body.toString()))
-        // .catch((err) => {
-            // if (err.status === 404) {
-                fetchTags(imageTitle, imageUrl).then((tagResponse) => {
-                    const body = tagResponse.body;
-                    // return preq.post(`${kaskUrl}/${title}`, body)
-                    //     .then(() => res.json(body));
-                    res.json(body);
-                });
-            // }
-            // throw err;
-        // });
+    fetchTags(imageTitle, imageUrl).then((tagResponse) => {
+        const body = tagResponse.body;
+        res.json(body);
+    });
 });
 
 module.exports = () => {
